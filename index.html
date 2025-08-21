@@ -2,943 +2,999 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kothari Readymade - Fashion Redefined</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap"
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Kothari Readymade | Premium Clothing Store</title>
+    <meta name="description"
+        content="Kothari Readymade — a trusted local clothing destination for men, women, and kids. Trendy fashion, everyday essentials, and festive wear under one roof." />
+    <meta name="theme-color" content="#111827" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
     <style>
+        :root {
+  --bg: #101014;
+  --card: #1a1a20;
+  --muted: #a3a3ad;
+  --text: #f9fafb;
+
+  --brand: #3b82f6;    /* royal blue */
+  --brand-2: #f59e0b;  /* amber */
+  --accent: #ec4899;   /* pink */
+  --danger: #ef4444;   /* soft red */
+  --ok: #22c55e;       /* green */
+
+  --ring: 0 0 0 3px rgba(59, 130, 246, 0.4);
+  --shadow: 0 12px 36px rgba(0, 0, 0, 0.55);
+
+  --radius: 20px;
+  --radius-lg: 32px;
+  --max: 1320px;
+}
+
+
+
+
+
+
         * {
+            box-sizing: border-box
+        }
+
+        html,
+        body {
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
-        }
-
-        :root {
-            --primary: #2a2a2a;
-            --secondary: #d4af37;
-            --accent: #e63946;
-            --light: #f8f8f8;
-            --dark: #1a1a1a;
-            --text: #333;
-            --shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-            --transition: all 0.3s ease;
-        }
-
-        body {
-            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(180deg, #0b0f17, #0b0f17 60%, #0a1220);
             color: var(--text);
-            line-height: 1.6;
-            background-color: #ffffff;
-            overflow-x: hidden;
+            font-family: Inter, system-ui, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+            scroll-behavior: smooth
         }
 
-        h1,
-        h2,
-        h3,
-        h4 {
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 700;
-            margin-bottom: 1rem;
+        a {
+            color: inherit;
+            text-decoration: none
+        }
+
+        img {
+            max-width: 100%;
+            display: block
         }
 
         .container {
-            width: 100%;
-            max-width: 1200px;
+            max-width: var(--max);
             margin: 0 auto;
-            padding: 0 15px;
+            padding: 0 20px
         }
 
-        /* Header Styles */
+        /* Announcement */
+        .announce {
+            background: linear-gradient(90deg, var(--brand), var(--brand-2));
+            color: #03261f;
+            padding: 10px 16px;
+            text-align: center;
+            font-weight: 700;
+            letter-spacing: .2px
+        }
+
+        .announce small {
+            font-weight: 600;
+            opacity: .9
+        }
+
+        /* Header */
         header {
-            background-color: white;
-            box-shadow: var(--shadow);
             position: sticky;
             top: 0;
-            z-index: 1000;
+            z-index: 50;
+            background: rgba(11, 15, 23, .72);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(148, 163, 184, .12)
         }
 
-        .header-container {
+        .nav {
             display: flex;
-            justify-content: space-between;
             align-items: center;
-            padding: 15px 0;
+            justify-content: space-between;
+            height: 72px
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px
         }
 
         .logo {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 28px;
-            color: var(--primary);
-            text-decoration: none;
+            width: 38px;
+            height: 38px;
+            border-radius: 12px;
+            background: conic-gradient(from 180deg at 50% 50%, var(--brand), var(--brand-2));
+            box-shadow: var(--shadow)
+        }
+
+        .title {
+            font-weight: 800;
+            letter-spacing: .3px
+        }
+
+        .title span {
+            opacity: .7;
+            font-weight: 600
+        }
+
+        .navlinks {
             display: flex;
+            gap: 22px
+        }
+
+        .navlinks a {
+            opacity: .85
+        }
+
+        .navlinks a:hover {
+            opacity: 1
+        }
+
+        .cta {
+            display: inline-flex;
             align-items: center;
+            gap: 8px;
+            background: linear-gradient(90deg, var(--brand), var(--brand-2));
+            color: #04271f;
+            padding: 10px 14px;
+            border-radius: 999px;
+            font-weight: 700;
+            box-shadow: var(--shadow)
         }
 
-        .logo span {
-            color: var(--secondary);
-        }
-
-        .logo i {
-            margin-right: 10px;
-            color: var(--secondary);
-        }
-
-        .nav-menu {
-            display: flex;
-            list-style: none;
-        }
-
-        .nav-menu li {
-            margin-left: 25px;
-            position: relative;
-        }
-
-        .nav-menu a {
-            text-decoration: none;
-            color: var(--dark);
-            font-weight: 500;
-            transition: var(--transition);
-            position: relative;
-        }
-
-        .nav-menu a:after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: var(--secondary);
-            transition: var(--transition);
-        }
-
-        .nav-menu a:hover:after {
-            width: 100%;
-        }
-
-        .header-icons a {
-            color: var(--dark);
-            margin-left: 15px;
-            font-size: 18px;
-            transition: var(--transition);
-            position: relative;
-        }
-
-        .header-icons a:hover {
-            color: var(--secondary);
-        }
-
-        .cart-count {
-            position: absolute;
-            top: -10px;
-            right: -10px;
-            background: var(--accent);
-            color: white;
-            font-size: 12px;
-            width: 18px;
-            height: 18px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .menu-toggle {
+        .menu-btn {
             display: none;
-            font-size: 24px;
-            cursor: pointer;
+            background: none;
+            border: 0;
+            color: var(--text);
+            font-size: 20px
         }
 
-        /* Hero Section */
+        /* Mobile menu */
+        .mobile {
+            display: none
+        }
+
+        .mobile.open {
+            display: block
+        }
+
+        .mobile a {
+            display: block;
+            padding: 14px 0;
+            border-top: 1px solid rgba(148, 163, 184, .12)
+        }
+
+        /* Hero */
         .hero {
-            background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3)), url('https://images.unsplash.com/photo-1490481651871-ab68de25d43d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80') no-repeat center center/cover;
-            height: 85vh;
-            display: flex;
+            position: relative;
+            overflow: hidden
+        }
+
+        .hero .inner {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 34px;
             align-items: center;
-            color: white;
+            padding: 60px 0
         }
 
-        .hero-content {
-            max-width: 600px;
-            padding: 20px;
+        .badge {
+            display: inline-flex;
+            gap: 8px;
+            align-items: center;
+            background: rgba(34, 211, 238, .12);
+            color: #b6f3ff;
+            padding: 6px 12px;
+            border: 1px solid rgba(34, 211, 238, .35);
+            border-radius: 999px;
+            font-size: 13px
         }
 
-        .hero-content h1 {
-            font-size: 3.5rem;
-            margin-bottom: 20px;
-            line-height: 1.2;
+        .h1 {
+            font-size: 46px;
+            line-height: 1.1;
+            margin: 16px 0 12px;
+            font-weight: 900
         }
 
-        .hero-content p {
-            font-size: 1.2rem;
-            margin-bottom: 30px;
+        .h1 .grad {
+            background: linear-gradient(90deg, var(--brand), var(--brand-2));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent
+        }
+
+        .lead {
+            color: var(--muted);
+            font-size: 18px
+        }
+
+        .hero-cta {
+            margin-top: 24px;
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap
         }
 
         .btn {
-            display: inline-block;
-            background: var(--secondary);
-            color: white;
-            padding: 12px 30px;
-            border-radius: 4px;
-            text-decoration: none;
-            font-weight: 500;
-            transition: var(--transition);
-            border: none;
-            cursor: pointer;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            border: 1px solid rgba(148, 163, 184, .2);
+            background: #0c1322;
+            color: var(--text);
+            padding: 12px 16px;
+            border-radius: 14px;
+            font-weight: 700
         }
 
         .btn:hover {
-            background: var(--primary);
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            border-color: rgba(255, 255, 255, .35)
         }
 
-        .btn-outline {
-            background: transparent;
-            border: 2px solid white;
-            margin-left: 15px;
+        .btn-primary {
+            background: linear-gradient(90deg, var(--brand), var(--brand-2));
+            color: #052b23;
+            border-color: transparent
         }
 
-        .btn-outline:hover {
-            background: white;
-            color: var(--primary);
+        .hero-card {
+            background: radial-gradient(1200px 400px at 80% -10%, rgba(16, 185, 129, .12), transparent 40%),
+                radial-gradient(800px 300px at -20% 120%, rgba(34, 211, 238, .10), transparent 40%), var(--card);
+            border: 1px solid rgba(148, 163, 184, .12);
+            border-radius: var(--radius-lg);
+            padding: 16px;
+            box-shadow: var(--shadow)
         }
 
-        /* Categories Section */
-        .section-title {
-            text-align: center;
-            margin: 60px 0 40px;
-            position: relative;
-        }
-
-        .section-title:after {
-            content: '';
-            display: block;
-            width: 60px;
-            height: 3px;
-            background: var(--secondary);
-            margin: 15px auto;
-        }
-
-        .categories {
-            padding: 60px 0;
-        }
-
-        .category-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-        }
-
-        .category-card {
-            position: relative;
-            height: 320px;
-            border-radius: 8px;
+        .hero-img {
+            /* aspect-ratio: 4/5; */
+            border-radius: var(--radius);
             overflow: hidden;
-            box-shadow: var(--shadow);
-            transition: var(--transition);
+            background: linear-gradient(180deg, rgba(255, 255, 255, .06), transparent);
+            border: 1px solid rgba(148, 163, 184, .12)
         }
 
-        .category-card:hover {
-            transform: translateY(-10px);
-        }
-
-        .category-card img {
-            width: 100%;
+        .hero-img .ph {
             height: 100%;
-            object-fit: cover;
-            transition: var(--transition);
-        }
-
-        .category-card:hover img {
-            transform: scale(1.1);
-        }
-
-        .category-content {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            padding: 25px;
-            background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
-            color: white;
-        }
-
-        .category-content h3 {
-            font-size: 22px;
-            margin-bottom: 10px;
-        }
-
-        /* Products Section */
-        .products {
-            padding: 60px 0;
-            background: var(--light);
-        }
-
-        .product-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
+            place-items: center;
+            color: #99f6e4;
+            opacity: .8;
+
         }
 
-        .product-card {
-            background: white;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: var(--shadow);
-            transition: var(--transition);
-            position: relative;
+        .hero {
+            margin: 50px;
+            margin-top: -40px;
         }
 
-        .product-card:hover {
-            transform: translateY(-10px);
+        /* Sections */
+        section {
+            padding: 64px 0;
         }
 
-        .product-badge {
-            position: absolute;
-            top: 15px;
-            left: 15px;
-            background: var(--accent);
-            color: white;
-            padding: 5px 10px;
-            border-radius: 3px;
-            font-size: 12px;
-            font-weight: 600;
-            z-index: 1;
-        }
-
-        .product-img {
-            height: 280px;
-            overflow: hidden;
-        }
-
-        .product-img img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: var(--transition);
-        }
-
-        .product-card:hover .product-img img {
-            transform: scale(1.1);
-        }
-
-        .product-info {
-            padding: 20px;
-        }
-
-        .product-title {
-            font-size: 18px;
-            margin-bottom: 10px;
-            font-weight: 600;
-        }
-
-        .product-price {
+        .section-head {
             display: flex;
-            align-items: center;
+            align-items: end;
             justify-content: space-between;
+            gap: 18px;
+            margin-bottom: 26px
+        }
+
+        .section-head h2 {
+            font-size: 28px;
+            margin: 0
+        }
+
+        .section-head p {
+            color: var(--muted);
+            max-width: 650px
+        }
+
+        /* Categories */
+        .grid {
+            display: grid;
+            gap: 18px
+        }
+
+        .grid-3 {
+            grid-template-columns: repeat(3, 1fr)
+        }
+
+        .grid-4 {
+            grid-template-columns: repeat(4, 1fr)
+        }
+
+        .card {
+            background: var(--card);
+            border: 1px solid rgba(148, 163, 184, .12);
+            border-radius: var(--radius);
+            overflow: hidden;
+            transition: transform .2s ease, border-color .2s ease
+        }
+
+        .card:hover {
+            transform: translateY(-3px);
+            border-color: rgba(255, 255, 255, .25)
+        }
+
+        .card-img {
+            aspect-ratio: 4/3;
+            background: linear-gradient(135deg, rgba(16, 185, 129, .15), rgba(34, 211, 238, .10));
+            display: grid;
+            place-items: center;
+            color: #99f6e4
+        }
+
+        .card-body {
+            padding: 14px
+        }
+
+        .chip {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(16, 185, 129, .12);
+            border: 1px solid rgba(16, 185, 129, .35);
+            color: #8efad3;
+            padding: 4px 10px;
+            border-radius: 999px;
+            font-size: 12px
+        }
+
+        /* Products */
+        .product {
+            display: flex;
+            flex-direction: column
         }
 
         .price {
-            color: var(--secondary);
-            font-weight: 700;
-            font-size: 20px;
-        }
-
-        .original-price {
-            text-decoration: line-through;
-            color: #999;
-            font-size: 16px;
-            margin-right: 10px;
-        }
-
-        .add-to-cart {
-            background: var(--primary);
-            color: white;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
             display: flex;
             align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            transition: var(--transition);
+            gap: 10px;
+            margin-top: 6px
         }
 
-        .add-to-cart:hover {
-            background: var(--secondary);
+        .price .mrp {
+            text-decoration: line-through;
+            color: #94a3b867
         }
 
-        /* Features Section */
-        .features {
-            padding: 80px 0;
+        .star {
+            font-size: 12px
         }
 
-        .feature-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-        }
-
-        .feature-card {
-            text-align: center;
-            padding: 30px;
-            border-radius: 8px;
-            transition: var(--transition);
-        }
-
-        .feature-card:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow);
-        }
-
-        .feature-icon {
-            font-size: 40px;
-            color: var(--secondary);
-            margin-bottom: 20px;
-        }
-
-        .feature-card h3 {
-            margin-bottom: 15px;
-        }
-
-        /* Newsletter Section */
-        .newsletter {
-            padding: 80px 0;
-            background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('https://images.unsplash.com/photo-1520006403909-838d6b92c22e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80') no-repeat center center/cover;
-            color: white;
-            text-align: center;
-        }
-
-        .newsletter h2 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-        }
-
-        .newsletter p {
-            max-width: 600px;
-            margin: 0 auto 30px;
-            font-size: 1.1rem;
-        }
-
-        .newsletter-form {
-            max-width: 500px;
-            margin: 0 auto;
+        .actions {
             display: flex;
+            gap: 10px;
+            margin-top: 10px
         }
 
-        .newsletter-form input {
-            flex: 1;
-            padding: 15px;
-            border: none;
-            border-radius: 4px 0 0 4px;
-            font-size: 16px;
+        .toast {
+            position: fixed;
+            right: 18px;
+            bottom: 18px;
+            background: #101827;
+            color: #e2e8f0;
+            padding: 12px 14px;
+            border-radius: 12px;
+            border: 1px solid rgba(148, 163, 184, .2);
+            box-shadow: var(--shadow);
+            opacity: 0;
+            transform: translateY(10px);
+            transition: all .25s ease;
+            z-index: 60
         }
 
-        .newsletter-form button {
-            background: var(--secondary);
-            color: white;
-            border: none;
-            padding: 0 25px;
-            border-radius: 0 4px 4px 0;
-            cursor: pointer;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+        .toast.show {
+            opacity: 1;
+            transform: translateY(0)
+        }
+
+        /* Testimonials */
+        .testi {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 18px
+        }
+
+        .quote {
+            font-size: 14px;
+            color: #cbd5e1
+        }
+
+        .who {
+            margin-top: 10px;
+            color: #93c5fd;
+            font-weight: 700
+        }
+
+        /* Info */
+        .info {
+            display: grid;
+            grid-template-columns: 1.3fr .9fr;
+            gap: 20px
+        }
+
+        .hours {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            color: #cbd5e1
+        }
+
+        .hours li {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px dashed rgba(148, 163, 184, .2);
+            padding: 8px 0
+        }
+
+        .map {
+            border: 0;
+            aspect-ratio: 4/3;
+            width: 100%;
+            border-radius: var(--radius);
+            overflow: hidden
         }
 
         /* Footer */
         footer {
-            background: var(--dark);
-            color: white;
-            padding: 80px 0 30px;
+            border-top: 1px solid rgba(148, 163, 184, .12);
+            background: #0a1220
         }
 
-        .footer-grid {
+        .foot {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 40px;
-            margin-bottom: 40px;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 22px;
+            padding: 34px 0
         }
 
-        .footer-column h3 {
-            margin-bottom: 25px;
-            font-size: 20px;
-            position: relative;
-            padding-bottom: 10px;
+        .foot a {
+            color: #cbd5e1
         }
 
-        .footer-column h3:after {
-            content: '';
+        .copy {
+            padding: 14px 0;
+            color: #94a3b8;
+            border-top: 1px solid rgba(148, 163, 184, .12);
+            font-size: 14px
+        }
+
+        /* Utilities */
+        .hidden {
+            display: none
+        }
+
+        .pill {
+            display: inline-flex;
+            gap: 8px;
+            align-items: center;
+            border: 1px solid rgba(148, 163, 184, .25);
+            padding: 6px 12px;
+            border-radius: 999px;
+            color: #cbd5e1
+        }
+
+        .sr-only {
             position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 40px;
-            height: 2px;
-            background: var(--secondary);
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0
         }
 
-        .footer-links {
-            list-style: none;
+        .center {
+            text-align: center
         }
 
-        .footer-links li {
-            margin-bottom: 12px;
+        .sep {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(148, 163, 184, .25), transparent);
+            margin: 26px 0
         }
 
-        .footer-links a {
-            color: #ccc;
-            text-decoration: none;
-            transition: var(--transition);
-        }
-
-        .footer-links a:hover {
-            color: var(--secondary);
-            padding-left: 5px;
-        }
-
-        .social-icons {
-            display: flex;
-            margin-top: 20px;
-        }
-
-        .social-icons a {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 4px;
-            margin-right: 10px;
-            color: white;
-            transition: var(--transition);
-        }
-
-        .social-icons a:hover {
-            background: var(--secondary);
-            transform: translateY(-3px);
-        }
-
-        .contact-info {
-            list-style: none;
-        }
-
-        .contact-info li {
-            margin-bottom: 15px;
-            display: flex;
-            align-items: center;
-        }
-
-        .contact-info i {
-            margin-right: 15px;
-            color: var(--secondary);
-        }
-
-        .copyright {
-            text-align: center;
-            margin-top: 40px;
-            padding-top: 20px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            color: #999;
-        }
-
-        /* Responsive Styles */
-        @media (max-width: 992px) {
-            .hero-content h1 {
-                font-size: 2.8rem;
+        /* Responsive */
+        @media (max-width:1000px) {
+            .hero .inner {
+                grid-template-columns: 1fr;
+                gap: 18px
             }
 
-            .nav-menu {
-                gap: 15px;
+            .testi,
+            .info {
+                grid-template-columns: 1fr
+            }
+
+            .grid-4 {
+                grid-template-columns: repeat(2, 1fr)
             }
         }
 
-        @media (max-width: 768px) {
-            .menu-toggle {
-                display: block;
+        @media (max-width:768px) {
+            .navlinks {
+                display: none
             }
 
-            .nav-menu {
-                position: fixed;
-                top: 80px;
-                left: -100%;
-                flex-direction: column;
-                background: white;
-                width: 100%;
-                height: calc(100vh - 80px);
-                padding: 40px;
-                transition: var(--transition);
-                box-shadow: var(--shadow);
-                gap: 25px;
+            .menu-btn {
+                display: block
             }
 
-            .nav-menu.active {
-                left: 0;
+            .grid-3 {
+                grid-template-columns: repeat(2, 1fr)
             }
 
-            .hero-content h1 {
-                font-size: 2.3rem;
+            .foot {
+                grid-template-columns: 1fr
             }
 
-            .hero-content .btn {
-                margin-bottom: 10px;
-            }
-
-            .newsletter-form {
-                flex-direction: column;
-            }
-
-            .newsletter-form input {
-                border-radius: 4px;
-                margin-bottom: 10px;
-            }
-
-            .newsletter-form button {
-                border-radius: 4px;
-                padding: 15px;
+            .h1 {
+                font-size: 36px
             }
         }
 
-        @media (max-width: 576px) {
-            .hero {
-                height: 70vh;
+        @media (max-width:520px) {
+
+            .grid-4,
+            .grid-3 {
+                grid-template-columns: 1fr
             }
 
-            .hero-content h1 {
-                font-size: 2rem;
-            }
-
-            .section-title {
-                font-size: 1.8rem;
-            }
-
-            .category-card,
-            .product-card {
-                height: 250px;
-            }
-
-            .product-img {
-                height: 180px;
+            .h1 {
+                font-size: 30px
             }
         }
     </style>
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ClothingStore",
+    "name": "Kothari Readymade",
+    "description": "Local clothing store for men, women and kids.",
+    "image": "",
+    "telephone": "+91 99999 99999",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Main Market Road",
+      "addressLocality": "Your City",
+      "addressRegion": "Maharashtra",
+      "postalCode": "422001",
+      "addressCountry": "IN"
+    },
+    "openingHours": [
+      "Mo-Su 10:00-21:00"
+    ],
+    "url": "https://www.kothari-readymade.com/"
+  }
+  </script>
 </head>
 
 <body>
+    <!-- Top announcement -->
+    <div class="announce">
+        Festive arrivals are here! <small>Flat 10% off on 2+ items — in-store only.</small>
+    </div>
+
     <!-- Header -->
     <header>
-        <div class="container header-container" style="margin-left: 50px;">
-            <a href="#" class="logo">
-                <i class="fas fa-tshirt"></i>
-                Kothari<span>Readymade</span>
+        <div class="container nav" aria-label="Main">
+            <a class="brand" href="#home">
+                <span class="logo" aria-hidden="true"></span>
+                <div class="title">Kothari <span>Readymade</span></div>
             </a>
-
-            <div class="menu-toggle">
-                <i class="fas fa-bars"></i>
-            </div>
-
-            <ul class="nav-menu">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Men</a></li>
-                <li><a href="#">Women</a></li>
-                <li><a href="#">Kids</a></li>
-                <li><a href="#">New Arrivals</a></li>
-                <li><a href="#">Sale</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-            <p></p>
-            <!-- <div class="header-icons">
-                <a href="#"><i class="fas fa-search"></i></a>
-                <a href="#"><i class="fas fa-user"></i></a>
-                <a href="#">
-                    <i class="fas fa-shopping-cart"></i>
-                    <span class="cart-count">3</span>
+            <nav class="navlinks">
+                <a href="#categories">Categories</a>
+                <a href="#new">New Arrivals</a>
+                <a href="#offers">Offers</a>
+                <a href="#about">About</a>
+                <a href="#visit">Visit</a>
+            </nav>
+            <div style="display:flex;align-items:center;gap:10px">
+                <a class="cta" href="apparel_entrepreneurship_what_your_clothing_brand_needs_to_stay_relevant_2019.jpg"
+                    target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                        <path d="M20 3H4a1 1 0 0 0-1 1v16l4-4h13a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1Z" stroke="#052b23"
+                            stroke-width="1.5" />
+                    </svg>
+                    WhatsApp Us
                 </a>
-            </div> -->
+                <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mobileMenu">☰</button>
+            </div>
+        </div>
+        <div id="mobileMenu" class="container mobile" role="dialog" aria-modal="false">
+            <a href="#categories">Categories</a>
+            <a href="#new">New Arrivals</a>
+            <a href="#offers">Offers</a>
+            <a href="#about">About</a>
+            <a href="#visit">Visit</a>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
+    <!-- Hero -->
+    <main id="home" class="hero">
+        <div class="container inner">
+            <div>
+                <span class="badge">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                        <path
+                            d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27Z"
+                            stroke="#67e8f9" />
+                    </svg>
+                    Trusted by thousands of local shoppers
+                </span>
+                <h1 class="h1">Style for <span class="grad">everyday</span> & festivals</h1>
+                <p class="lead">Discover curated menswear, womenswear and kidswear — quality fabrics, modern fits, and
+                    timeless classics. Visit our store to feel the fabric and get the perfect fit.</p>
+                <div class="hero-cta">
+                    <a class="btn btn-primary" href="#new">Shop New Arrivals</a>
+                    <a class="btn" href="#visit">Get Directions</a>
+                    <a class="btn" href="tel:+919999999999">Call Store</a>
+                </div>
+                <div style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap">
+                    <span class="pill">Free size-exchange in 7 days</span>
+                    <span class="pill">Tailoring assistance available</span>
+                    <span class="pill">Cash / UPI accepted</span>
+                </div>
+            </div>
+            <div class="hero-card">
+                <div class="hero-img">
+                    <!-- Replace placeholder with a product/banner image URL if desired -->
+                    <div class="ph"><img
+                            src="apparel_entrepreneurship_what_your_clothing_brand_needs_to_stay_relevant_2019.jpg"
+                            alt=""></div>
+                </div>
+                <div style="padding:12px 6px 6px;color:#a3e7ff">Trending: Linen shirts • Ethnic kurtas • Summer dresses
+                    • Kids sets</div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Categories -->
+    <section id="categories">
         <div class="container">
-            <div class="hero-content">
-                <h1>Elevate Your Style with Premium Fashion</h1>
-                <p>Discover the latest trends and find your perfect fit with our exclusive collection</p>
-                <div class="hero-buttons">
-                    <a href="#" class="btn">Shop Now</a>
-                    <a href="#" class="btn btn-outline">New Arrivals</a>
+            <div class="section-head">
+                <h2>Shop by Category</h2>
+                <p>From office-ready fits to party looks — explore what you need by category and drop by the store for
+                    trials.</p>
+            </div>
+            <div class="grid grid-4">
+                <!-- Category Card -->
+                <a class="card" href="#new" aria-label="Menswear">
+                    <div class="card-img">Menswear</div>
+                    <div class="card-body">
+                        <div class="chip">Shirts • Trousers • Tees</div>
+                    </div>
+                </a>
+                <a class="card" href="#new" aria-label="Womenswear">
+                    <div class="card-img">Womenswear</div>
+                    <div class="card-body">
+                        <div class="chip">Kurtis • Dresses • Denim</div>
+                    </div>
+                </a>
+                <a class="card" href="#new" aria-label="Kids">
+                    <div class="card-img">Kids</div>
+                    <div class="card-body">
+                        <div class="chip">Sets • Ethnic • Casuals</div>
+                    </div>
+                </a>
+                <a class="card" href="#new" aria-label="Ethnic & Festive">
+                    <div class="card-img">Ethnic & Festive</div>
+                    <div class="card-body">
+                        <div class="chip">Kurtas • Sarees • Lehengas</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured / New Arrivals -->
+    <section id="new">
+        <div class="container">
+            <div class="section-head">
+                <h2>New Arrivals</h2>
+                <p>Fresh drops this week. Limited pieces — call or WhatsApp to reserve for in-store pickup.</p>
+            </div>
+            <div class="grid grid-4">
+                <!-- Product Card Template - Duplicate & Replace Details -->
+                <div class="card product">
+                    <div class="card-img" aria-label="Product image">Linen Shirt</div>
+                    <div class="card-body">
+                        <div style="display:flex;justify-content:space-between;align-items:center">
+                            <strong>Premium Linen Shirt</strong>
+                            <span class="star">★★★★★</span>
+                        </div>
+                        <div class="price"><span>₹1,499</span> <span class="mrp">₹1,799</span></div>
+                        <div class="actions">
+                            <button class="btn btn-sm add" data-name="Premium Linen Shirt">Reserve</button>
+                            <a class="btn" href="https://wa.me/919999999999?text=Reserve%20Premium%20Linen%20Shirt"
+                                target="_blank" rel="noopener">WhatsApp</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card product">
+                    <div class="card-img">Summer Dress</div>
+                    <div class="card-body">
+                        <div style="display:flex;justify-content:space-between;align-items:center">
+                            <strong>Floral Summer Dress</strong>
+                            <span class="star">★★★★☆</span>
+                        </div>
+                        <div class="price"><span>₹1,299</span> <span class="mrp">₹1,599</span></div>
+                        <div class="actions">
+                            <button class="btn btn-sm add" data-name="Floral Summer Dress">Reserve</button>
+                            <a class="btn" href="https://wa.me/919999999999?text=Reserve%20Floral%20Summer%20Dress"
+                                target="_blank" rel="noopener">WhatsApp</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card product">
+                    <div class="card-img">Kids Co-ord</div>
+                    <div class="card-body">
+                        <div style="display:flex;justify-content:space-between;align-items:center">
+                            <strong>Kids Co‑ord Set</strong>
+                            <span class="star">★★★★★</span>
+                        </div>
+                        <div class="price"><span>₹899</span> <span class="mrp">₹1,099</span></div>
+                        <div class="actions">
+                            <button class="btn btn-sm add" data-name="Kids Co-ord Set">Reserve</button>
+                            <a class="btn" href="https://wa.me/919999999999?text=Reserve%20Kids%20Co-ord%20Set"
+                                target="_blank" rel="noopener">WhatsApp</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card product">
+                    <div class="card-img">Kurta Set</div>
+                    <div class="card-body">
+                        <div style="display:flex;justify-content:space-between;align-items:center">
+                            <strong>Men's Kurta Set</strong>
+                            <span class="star">★★★★☆</span>
+                        </div>
+                        <div class="price"><span>₹1,899</span> <span class="mrp">₹2,299</span></div>
+                        <div class="actions">
+                            <button class="btn btn-sm add" data-name="Men's Kurta Set">Reserve</button>
+                            <a class="btn" href="https://wa.me/919999999999?text=Reserve%20Men%27s%20Kurta%20Set"
+                                target="_blank" rel="noopener">WhatsApp</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sep"></div>
+
+            <!-- Offers Row -->
+            <div id="offers" class="grid grid-3">
+                <div class="card" style="padding:16px">
+                    <strong>Combo Deal</strong>
+                    <p class="lead">Buy 2 shirts & get flat 10% off. Mix & match across sizes.</p>
+                    <a class="btn" href="https://wa.me/919999999999?text=I%20want%20the%20Combo%20Deal" target="_blank"
+                        rel="noopener">Claim on WhatsApp</a>
+                </div>
+                <div class="card" style="padding:16px">
+                    <strong>Weekend Offer</strong>
+                    <p class="lead">₹200 off on all dresses above ₹1,499. This Fri–Sun only.</p>
+                    <a class="btn" href="#visit">Visit Store</a>
+                </div>
+                <div class="card" style="padding:16px">
+                    <strong>Loyalty</strong>
+                    <p class="lead">Collect 5 stamps and get ₹500 off your next bill.</p>
+                    <a class="btn" href="tel:+919999999999">Ask at Counter</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Categories Section -->
-    <section class="categories">
+    <!-- Testimonials / Social Proof -->
+    <section id="about">
         <div class="container">
-            <h2 class="section-title">Shop By Category</h2>
-            <div class="category-grid">
-                <div class="category-card">
-                    <img src="https://images.unsplash.com/photo-1617137968427-85924c800a22?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80"
-                        alt="Men's Collection">
-                    <div class="category-content">
-                        <h3>Men's Collection</h3>
-                        <a href="#" class="btn">Explore</a>
+            <div class="section-head">
+                <h2>Why shop at Kothari?</h2>
+                <p>We’re a family-run store known for genuine pricing, quality fabrics, and friendly assistance. Our
+                    customers become regulars because we remember your fit and style.</p>
+            </div>
+            <div class="testi">
+                <div class="card" style="padding:16px">
+                    <div class="quote">“Great collection and fair prices. The staff helped me find the perfect kurta for
+                        a family function.”</div>
+                    <div class="who">— A. Sharma</div>
+                </div>
+                <div class="card" style="padding:16px">
+                    <div class="quote">“I always get my office shirts here. The fabric and fit are consistently good.”
+                    </div>
+                    <div class="who">— R. Patil</div>
+                </div>
+            </div>
+
+            <div class="sep"></div>
+
+            <!-- Simple Contact Form (frontend only) -->
+            <div class="grid grid-3">
+                <div class="card" style="padding:16px">
+                    <strong>Ask for availability</strong>
+                    <p class="lead">Tell us the size and category. We’ll reply on WhatsApp.</p>
+                    <form id="contactForm">
+                        <label class="sr-only" for="name">Name</label>
+                        <input id="name" name="name" placeholder="Your name" required
+                            style="width:100%;margin:6px 0 8px;padding:12px;border-radius:12px;border:1px solid rgba(148,163,184,.3);background:#0b1321;color:#e5e7eb">
+                        <label class="sr-only" for="phone">Phone</label>
+                        <input id="phone" name="phone" placeholder="Phone / WhatsApp" required pattern="[+0-9\s-]{8,}"
+                            style="width:100%;margin:6px 0 8px;padding:12px;border-radius:12px;border:1px solid rgba(148,163,184,.3);background:#0b1321;color:#e5e7eb">
+                        <label class="sr-only" for="msg">Message</label>
+                        <textarea id="msg" name="msg" placeholder="I need a size 40 linen shirt (blue)…" required
+                            rows="3"
+                            style="width:100%;margin:6px 0 8px;padding:12px;border-radius:12px;border:1px solid rgba(148,163,184,.3);background:#0b1321;color:#e5e7eb"></textarea>
+                        <button class="btn btn-primary" type="submit" style="width:100%">Send on WhatsApp</button>
+                    </form>
+                    <div id="formNote" class="lead" style="display:none;margin-top:8px;color:#86efac">Opening WhatsApp…
                     </div>
                 </div>
-
-                <div class="category-card">
-                    <img src="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80"
-                        alt="Women's Collection">
-                    <div class="category-content">
-                        <h3>Women's Collection</h3>
-                        <a href="#" class="btn">Explore</a>
-                    </div>
+                <div class="card" style="padding:16px">
+                    <strong>Services</strong>
+                    <ul class="hours" style="margin-top:10px">
+                        <li><span>Size Exchange</span><span>7 days</span></li>
+                        <li><span>Alterations</span><span>Available</span></li>
+                        <li><span>Gift Wrapping</span><span>Free</span></li>
+                        <li><span>Payments</span><span>UPI / Card / Cash</span></li>
+                    </ul>
                 </div>
-
-                <div class="category-card">
-                    <img src="https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80"
-                        alt="Kids' Collection">
-                    <div class="category-content">
-                        <h3>Kids' Collection</h3>
-                        <a href="#" class="btn">Explore</a>
+                <div class="card" style="padding:16px">
+                    <strong>Follow us</strong>
+                    <p class="lead">See latest drops on Instagram & Facebook.</p>
+                    <div class="grid grid-3">
+                        <a class="card-img" href="#" aria-label="Instagram">Instagram</a>
+                        <a class="card-img" href="#" aria-label="Facebook">Facebook</a>
+                        <a class="card-img" href="#" aria-label="YouTube">YouTube</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Products Section -->
-    <section class="products">
+    <!-- Visit / Map / Hours -->
+    <section id="visit">
         <div class="container">
-            <h2 class="section-title">Featured Products</h2>
-            <div class="product-grid">
-                <div class="product-card">
-                    <div class="product-badge">New</div>
-                    <div class="product-img">
-                        <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=436&q=80"
-                            alt="Formal Shirt">
+            <div class="section-head">
+                <h2>Visit the Store</h2>
+                <p>Try before you buy. We’re located in the heart of the market with easy parking nearby.</p>
+            </div>
+            <div class="info">
+                <div class="card" style="padding:16px">
+                    <strong>Store Address</strong>
+                    <p class="lead" style="margin-top:8px">Kothari Readymade<br> Main Market Road, Your City,
+                        Maharashtra 422001</p>
+                    <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px">
+                        <a class="btn btn-primary" href="https://maps.google.com/?q=Kothari%20Readymade%20Your%20City"
+                            target="_blank" rel="noopener">Open in Google Maps</a>
+                        <a class="btn" href="tel:+919999999999">Call</a>
+                        <a class="btn" href="https://wa.me/919999999999" target="_blank" rel="noopener">WhatsApp</a>
                     </div>
-                    <div class="product-info">
-                        <h3 class="product-title">Classic Formal Shirt</h3>
-                        <div class="product-price">
-                            <div class="price">
-                                <span class="original-price">₹1,999</span>
-                                ₹1,499
-                            </div>
-                            <div class="add-to-cart">
-                                <i class="fas fa-plus"></i>
-                            </div>
-                        </div>
-                    </div>
+                    <div class="sep"></div>
+                    <strong>Timings</strong>
+                    <ul class="hours" aria-label="Opening hours">
+                        <li><span>Mon – Sun</span><span>10:00 AM – 9:00 PM</span></li>
+                    </ul>
                 </div>
-
-                <div class="product-card">
-                    <div class="product-img">
-                        <img src="https://images.unsplash.com/photo-1583744946564-b52ae1c685c7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=435&q=80"
-                            alt="Summer Dress">
-                    </div>
-                    <div class="product-info">
-                        <h3 class="product-title">Elegant Summer Dress</h3>
-                        <div class="product-price">
-                            <div class="price">₹2,299</div>
-                            <div class="add-to-cart">
-                                <i class="fas fa-plus"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="product-card">
-                    <div class="product-badge">Sale</div>
-                    <div class="product-img">
-                        <img src="https://images.unsplash.com/photo-1529903384028-929ae5dccdf1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=435&q=80"
-                            alt="Denim Jacket">
-                    </div>
-                    <div class="product-info">
-                        <h3 class="product-title">Denim Jacket</h3>
-                        <div class="product-price">
-                            <div class="price">
-                                <span class="original-price">₹3,999</span>
-                                ₹3,499
-                            </div>
-                            <div class="add-to-cart">
-                                <i class="fas fa-plus"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="product-card">
-                    <div class="product-img">
-                        <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=462&q=80"
-                            alt="Casual Wear">
-                    </div>
-                    <div class="product-info">
-                        <h3 class="product-title">Casual Wear</h3>
-                        <div class="product-price">
-                            <div class="price">₹1,799</div>
-                            <div class="add-to-cart">
-                                <i class="fas fa-plus"></i>
-                            </div>
-                        </div>
-                    </div>
+                <div class="card" style="overflow:hidden">
+                    <iframe class="map" loading="lazy" allowfullscreen
+                        src="https://www.google.com/maps?q=Kothari%20Readymade%20Your%20City&output=embed"></iframe>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Features Section -->
-    <section class="features">
-        <div class="container">
-            <div class="feature-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-truck"></i>
-                    </div>
-                    <h3>Free Shipping</h3>
-                    <p>Free shipping on all orders over ₹1999</p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-undo"></i>
-                    </div>
-                    <h3>Easy Returns</h3>
-                    <p>30-day money back guarantee</p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-shield-alt"></i>
-                    </div>
-                    <h3>Secure Payment</h3>
-                    <p>All transactions are secure and encrypted</p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-headset"></i>
-                    </div>
-                    <h3>24/7 Support</h3>
-                    <p>Dedicated customer support</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Newsletter Section -->
-    <section class="newsletter">
-        <div class="container">
-            <h2>Subscribe to Our Newsletter</h2>
-            <p>Stay updated with our latest collections, exclusive offers, and fashion tips</p>
-            <form class="newsletter-form">
-                <input type="email" placeholder="Enter your email address">
-                <button type="submit">Subscribe</button>
-            </form>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-column">
-                    <h3>Kothari Readymade</h3>
-                    <p>Quality clothing for every occasion. Shop the latest trends in fashion with us.</p>
-                    <div class="social-icons">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-pinterest"></i></a>
-                    </div>
-                </div>
-
-                <div class="footer-column">
-                    <h3>Quick Links</h3>
-                    <ul class="footer-links">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Shop</a></li>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Contact</a></li>
-                        <li><a href="#">FAQ</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-column">
-                    <h3>Categories</h3>
-                    <ul class="footer-links">
-                        <li><a href="#">Men's Clothing</a></li>
-                        <li><a href="#">Women's Clothing</a></li>
-                        <li><a href="#">Kids' Clothing</a></li>
-                        <li><a href="#">Accessories</a></li>
-                        <li><a href="#">New Arrivals</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-column">
-                    <h3>Contact Us</h3>
-                    <ul class="contact-info">
-                        <li><i class="fas fa-map-marker-alt"></i> 123 Fashion Street, Mumbai</li>
-                        <li><i class="fas fa-phone"></i> +91 98765 43210</li>
-                        <li><i class="fas fa-envelope"></i> info@kothari-readymade.com</li>
-                        <li><i class="fas fa-clock"></i> Mon-Sat: 10AM - 8PM</li>
-                    </ul>
+        <div class="container foot">
+            <div>
+                <div class="title">Kothari <span>Readymade</span></div>
+                <p class="lead" style="margin-top:8px">Quality clothing for men, women and kids since 19XX.</p>
+                <div style="display:flex;gap:10px;margin-top:10px;flex-wrap:wrap">
+                    <a class="pill" href="tel:+919999999999">📞 +91 99999 99999</a>
+                    <a class="pill" href="mailto:hello@kotharireadymade.in">✉️ hello@kotharireadymade.in</a>
                 </div>
             </div>
-
-            <div class="copyright">
-                <p>&copy; 2023 Kothari Readymade. All Rights Reserved.</p>
+            <div>
+                <strong>Quick Links</strong>
+                <ul class="hours" style="margin-top:10px">
+                    <li><a href="#categories">Categories</a></li>
+                    <li><a href="#new">New Arrivals</a></li>
+                    <li><a href="#offers">Offers</a></li>
+                    <li><a href="#visit">Visit</a></li>
+                </ul>
+            </div>
+            <div>
+                <strong>Policies</strong>
+                <ul class="hours" style="margin-top:10px">
+                    <li>7‑day size exchange</li>
+                    <li>No-questions returns (store credit)</li>
+                    <li>1‑year stitching warranty (alterations)</li>
+                </ul>
             </div>
         </div>
+        <div class="container copy">© <span id="yr"></span> Kothari Readymade. All rights reserved.</div>
     </footer>
 
+    <div class="toast" id="toast" role="status" aria-live="polite">Added to reserve list</div>
+
+    <a href="#home" id="toTop" class="btn"
+        style="position:fixed;right:18px;bottom:84px;opacity:0;pointer-events:none;transition:opacity .2s ease">↑
+        Top</a>
+
     <script>
-        // Mobile Menu Toggle
-        const menuToggle = document.querySelector('.menu-toggle');
-        const navMenu = document.querySelector('.nav-menu');
-
-        menuToggle.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-            menuToggle.querySelector('i').classList.toggle('fa-bars');
-            menuToggle.querySelector('i').classList.toggle('fa-times');
+        // Mobile menu toggle
+        const menuBtn = document.getElementById('menuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('open');
+            const open = mobileMenu.classList.contains('open');
+            menuBtn.setAttribute('aria-expanded', String(open));
         });
 
-        // Add to Cart Animation
-        const addToCartButtons = document.querySelectorAll('.add-to-cart');
-
-        addToCartButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                button.innerHTML = '<i class="fas fa-check"></i>';
-                setTimeout(() => {
-                    button.innerHTML = '<i class="fas fa-plus"></i>';
-                }, 1500);
-
-                // Update cart count
-                const cartCount = document.querySelector('.cart-count');
-                cartCount.textContent = parseInt(cartCount.textContent) + 1;
-            });
+        // Reserve buttons (demo toast)
+        const toast = document.getElementById('toast');
+        function showToast(msg) {
+            toast.textContent = msg || 'Added to reserve list';
+            toast.classList.add('show');
+            setTimeout(() => toast.classList.remove('show'), 2200);
+        }
+        document.querySelectorAll('.add').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const name = btn.dataset.name || 'Product';
+                showToast(`${name} reserved! We will confirm on WhatsApp.`);
+            })
         });
 
-        // Newsletter Form Validation
-        const newsletterForm = document.querySelector('.newsletter-form');
-
-        newsletterForm.addEventListener('submit', (e) => {
+        // Contact form -> open WhatsApp with pre-filled message
+        const form = document.getElementById('contactForm');
+        const note = document.getElementById('formNote');
+        form.addEventListener('submit', (e) => {
             e.preventDefault();
-            const email = newsletterForm.querySelector('input').value;
+            const name = encodeURIComponent(form.name.value.trim());
+            const phone = encodeURIComponent(form.phone.value.trim());
+            const msg = encodeURIComponent(form.msg.value.trim());
+            const text = `New enquiry from ${name}%0AContact: ${phone}%0A%0A${msg}`;
+            const number = '919999999999'; // TODO: replace with store WhatsApp number
+            const url = `https://wa.me/${number}?text=${text}`;
+            note.style.display = 'block';
+            window.open(url, '_blank');
+        });
 
-            if (!email || !email.includes('@')) {
-                alert('Please enter a valid email address.');
+        // Back to top button
+        const toTop = document.getElementById('toTop');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 600) {
+                toTop.style.opacity = '1';
+                toTop.style.pointerEvents = 'auto';
             } else {
-                alert('Thank you for subscribing to our newsletter!');
-                newsletterForm.reset();
+                toTop.style.opacity = '0';
+                toTop.style.pointerEvents = 'none';
             }
         });
+
+        // Year
+        document.getElementById('yr').textContent = new Date().getFullYear();
     </script>
+
+    <!--
+  🔧 QUICK CUSTOMIZATION GUIDE
+  1) Replace placeholder phone/WhatsApp numbers (find 919999999999) and email.
+  2) Update address in the Visit section and the JSON-LD schema above.
+  3) Swap hero/product images: replace .card-img/.hero-img placeholders with your image URLs or <img> tags.
+  4) Duplicate product cards to add more items. Adjust prices, names, and WhatsApp text.
+  5) If you have Instagram, replace social links under "Follow us".
+  6) Host as a single HTML file; no external JS/CSS needed except Google Fonts.
+  -->
 </body>
 
 </html>
