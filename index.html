@@ -579,12 +579,10 @@
     ],
     "url": "https://www.kothari-readymade.com/"
   }
-        /* Use multiple background images with fallbacks */
-.hero {
+       .hero {
     background: 
         linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4)),
-        url('https://images.unsplash.com/photo-1490481651871-ab68de25d43d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80'),
-        url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="%232C3E50"/><text x="50%" y="50%" font-family="Arial" font-size="10" fill="%23ffffff" text-anchor="middle" dominant-baseline="middle">Kothari Clothing</text></svg>');
+        url('/images/hero-bg.jpg'); /* Relative path to your image */
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -593,6 +591,18 @@
     align-items: center;
     color: var(--white);
     position: relative;
+}
+
+/* Fallback if the local image doesn't exist */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--primary);
+    z-index: -1;
 }
   </script>
 </head>
